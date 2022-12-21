@@ -1,50 +1,77 @@
 <html>
   <head>
     <style>
-      .text {
-        text-align: center;
-        font-size: 60px;
-        font-family: Arial, sans-serif;
-        color: black;
-        line-height: 100vh;
-        
-      }
+    
       body {
         /* Set the background image and make it cover the entire page */
-        background-image: url("https://images.unsplash.com/photo-1671649872791-cfbb19e5d75e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
         background-size: cover;
       }
+      
+      .text {
+        /* Add some padding to the text to make it easier to read */
+padding: 32px;        
+        /* Set the text color to white so it stands out against the background image */
+        color: black;
+        
+        /* Center the text horizontally and vertically */
+        text-align: center;
+        padding: 220px 0;
 
+        /* line-height: 100vh; */
+        
+        /* Set the font size and font family */
+        font-size: 32px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        
 
+      }
     </style>
   </head>
   <body>
-    <div class="text">
+    <div class="text" dir="rtl">
       <!-- The text will be generated and displayed here -->
     </div>
     <script>
       // Generate a random number
-      const randomNumber = Math.floor(Math.random() * 10);
+      const randomTextNumber = Math.floor(Math.random() * 12);
+      const randomImageNumber = Math.floor(Math.random() * 3);
+
 
       // Define an array of strings
       const textArray = [
-        "Text 1",
-        "Text 2",
-        "Text 3",
-        "Text 4",
-        "Text 5",
-        "Text 6",
-        "Text 7",
-        "Text 8",
-        "Text 9",
-        "Text 10"
+        "את עושה עבודה מדהימה ❤️",
+        "תחשבי כמה למדת מאז שהתחלת את התואר! היית מאמינה אז שתדעי את כל מה שאת יודעת היום?",
+        "את מוקפת בהמוןןן אנשים שאוהבים אותך כל כך ❤️ אל תהססי לדבר עם מישהו מאיתנו אם את צריכה!",
+        "את על זה!",
+        "יש לך את זה❤️",
+        "את מסוגלת💗",
+        "אני מאמינה בך בטירוף!",
+        "עוד חודש מהיום תסתכלי אחורה ותצחקי על זה שייחסת כל כך הרבה חשיבות לדבר הזה. קטן עלייך!",
+        "קטן עלייךךךך",
+        "איזה כיף שיש לך את האפשרות ללמוד ולפתח את עצמך! גם אם קשה, את במקום מדהים ❤️",
+        "תרשי לעצמך לקחת גם הפסקות לפעמים אם את צריכה! עם משהו שימלא אותך - הליכה בחוץ, להכין משהו טעים, לדבר עם מישהו שאת אוהבת 💗",
+        "אני פשוט גאה בך הכי בעולם💕 תאמיני בעצמךך!"
       ];
 
       // Get the randomly chosen text
-      const text = textArray[randomNumber];
+      const text = textArray[randomTextNumber];
 
       // Set the content of the div to the chosen text
       document.querySelector(".text").innerHTML = text;
+
+      // Define an array of image URLs
+      const imageArray = [
+        "https://e1.pxfuel.com/desktop-wallpaper/608/231/desktop-wallpaper-sunny-sun-summer-pattern.jpg",
+        "https://d3octkd2uqmyim.cloudfront.net/media/bi/35142/precious-daisies-wallpaper-l.jpg?q=1664322743",
+        "https://img.freepik.com/premium-vector/70s-seamless-pattern-with-vintage-daisy-camomile-groovy-flowers-psychedelic-floral-background_522613-410.jpg?w=2000"
+      ];
+
+      // Get the randomly chosen image URL
+      const imageURL = imageArray[randomImageNumber];
+
+      // Set the background image of the body element to the chosen image
+      document.querySelector("body").style.backgroundImage = `url(${imageURL})`;
     </script>
   </body>
 </html>
