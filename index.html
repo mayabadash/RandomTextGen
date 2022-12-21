@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <style>
+      .text {
+        text-align: center;
+        font-size: 32px;
+        font-family: Arial, sans-serif;
+        color: white;
+        line-height: 100vh; /* This will center the text vertically */
+        
+      }
+      body {
+        /* Set the background image and make it cover the entire page */
+        background-image: url("https://images.unsplash.com/photo-1671649872791-cfbb19e5d75e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+        background-size: cover;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="text">
+      <!-- The text will be generated and displayed here -->
+    </div>
+    <script>
+      // Generate a random number
+      const randomNumber = Math.floor(Math.random() * 10);
+
+      // Define an array of strings
+      const textArray = [
+        "Text 1",
+        "Text 2",
+        "Text 3",
+        "Text 4",
+        "Text 5",
+        "Text 6",
+        "Text 7",
+        "Text 8",
+        "Text 9",
+        "Text 10"
+      ];
+
+      // Get the randomly chosen text
+      const text = textArray[randomNumber];
+
+      // Set the content of the div to the chosen text
+      document.querySelector(".text").innerHTML = text;
+    </script>
+  </body>
+</html>
